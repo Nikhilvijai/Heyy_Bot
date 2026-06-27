@@ -1,8 +1,8 @@
-# MindGuide 🧘‍♂️
+# HeyyBot 🧘‍♂️
 
-MindGuide is a Telegram chatbot that acts as an empathetic mental wellness coach. It combines a local LLM (via Ollama) with a Retrieval-Augmented Generation (RAG) pipeline to ground its responses in curated wellness content, while applying built-in safety rules and crisis detection.
+HeyyBot is a Telegram chatbot that acts as an empathetic mental wellness coach. It combines a local LLM (via Ollama) with a Retrieval-Augmented Generation (RAG) pipeline to ground its responses in curated wellness content, while applying built-in safety rules and crisis detection.
 
-> ⚠️ **Disclaimer:** MindGuide is not a licensed therapist or medical professional. It does not diagnose conditions or prescribe treatment. It is a supportive tool for self-reflection and general wellness guidance only. If you or someone you know is in crisis, please contact local emergency services or a crisis helpline immediately.
+> ⚠️ **Disclaimer:** HeyyBot is not a licensed therapist or medical professional. It does not diagnose conditions or prescribe treatment. It is a supportive tool for self-reflection and general wellness guidance only. If you or someone you know is in crisis, please contact local emergency services or a crisis helpline immediately.
 
 ---
 
@@ -20,7 +20,7 @@ MindGuide is a Telegram chatbot that acts as an empathetic mental wellness coach
 1. A user sends a message to the bot.
 2. The message is checked against a crisis-keyword list. If a match is found, the bot immediately replies with helpline information and skips the LLM call.
 3. Otherwise, the message is embedded and used to query a Chroma vector store for the top relevant chunks of context.
-4. The retrieved context is injected into a system prompt (`MindGuide` persona) along with the user's recent chat history.
+4. The retrieved context is injected into a system prompt (`HeyyBot` persona) along with the user's recent chat history.
 5. The combined prompt is sent to a local Ollama model, and the reply is sent back to the user.
 6. The conversation turn is stored in memory, capped at the last 20 messages per user.
 
@@ -43,6 +43,7 @@ MindGuide is a Telegram chatbot that acts as an empathetic mental wellness coach
 ├── create_db.ipynb     # Notebook to build the Chroma vector store from data.txt
 ├── data.txt             # Source wellness content to embed (not included)
 ├── data_db/             # Persisted Chroma vector store (generated)
+├── requirements.txt     # Required packages needed
 └── .env                  # Environment variables (not committed)
 ```
 
