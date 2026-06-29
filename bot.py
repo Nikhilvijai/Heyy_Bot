@@ -152,7 +152,6 @@ async def start(message: types.Message):
 async def help_cmd(message: types.Message):
     await message.reply(
         "/start - Start bot\n"
-        "/help - Show help\n"
         "/clear - Clear conversation"
     )
 
