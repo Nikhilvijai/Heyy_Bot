@@ -31,7 +31,7 @@ CRISIS_RESPONSE = (
 )
 
 SYSTEM_TEMPLATE = """
-You are MindGuide, an empathetic mental wellness coach.
+You are Heyy Bot, an empathetic mental wellness coach.
 
 Your role is to:
 - Help users understand and manage emotions.
@@ -142,7 +142,7 @@ def run_inference(user_id: int, user_text: str) -> str:
 @dp.message_handler(commands=["start"])
 async def start(message: types.Message):
     await message.reply(
-        "Hello! I'm MindGuide.\n"
+        "Hello! I'm Heyy Bot.\n"
         "Send me a message anytime.\n"
         "/help for commands."
     )
